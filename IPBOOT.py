@@ -31,6 +31,7 @@ except ImportError as err:
     CriticalError("Falha ao importar alguns modulos", err)
     sys.exit(1)
     
+    # Analisa args
     parser = argparse.ArgumentParser(description="Overload HTTP Attack")
 parser.add_argument(
     "--target",
@@ -50,12 +51,13 @@ parser.add_argument(
 parser.add_argument(
     "--threads", type=int, default=20000, metavar="<threads>", help="contagem de threads (1-20000)"
     )
+    
+    # Obtem args
     args = parser.parse_args()
 threads = args.threads
 time = args.time
 method = str(args.method).upper()
 target = args.target
-
 
 if __name__ == "__main__":
     # Print help
