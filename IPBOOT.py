@@ -1,16 +1,7 @@
 # Feito por LE CUONG
 # Importa os modulos
 
-import random
-import threading
-import socket
-import os
-import time
-from termcolor import colored
-
-print(colored(r"""
-tool by Le Cuong Tricker Piano
-
+prinr(colored(r"""
  _____ _____  ____   ____   ____ _______ 
 |_   _|  __ \|  _ \ / __ \ / __ \__   __|
   | | | |__) | |_) | |  | | |  | | | |   
