@@ -16,12 +16,12 @@ This exhausts the servers thread pool and the server can't reply to other people
 If you found this work useful, please cite it as
 
 ```bibtex
-@article{gkbrkslowloris,
-  title = "Slowloris",
-  author = "Gokberk Yaltirakli",
+@article{le-cuong-hacker1111/IPBOOT,
+  title = "IPBOOT",
+  author = "le-cuong-hacker1111",
   journal = "github.com",
   year = "2015",
-  url = "https://github.com/gkbrk/slowloris"
+  url = "https://github.com/le-cuong-hacker1111/IPBOOT/"
 }
 ```
 
@@ -36,9 +36,12 @@ That's all it takes to install and run slowloris.py.
 
 If you want to clone using git instead of pip, here's how you do it.
 
-* `git clone https://github.com/gkbrk/slowloris.git`
-* `cd slowloris`
-* `python3 slowloris.py example.com`
+* `https://github.com/le-cuong-hacker1111/IPBOOT/`
+* `cd IPBOOT`
+* chmod +x IPBOOT.py
+* chmod +x setup.py
+* python3 setup.py -d
+* `python3 IPBOOT.py example.com`
 
 ### SOCKS5 proxy support
 
